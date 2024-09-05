@@ -1,0 +1,215 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* root */
+:root {
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  --Light-slate-blue-background: hsl(252, 100%, 67%);
+  --Light-royal-blue-background: hsl(241, 81%, 60%);
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: rgb(16, 14, 80);
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 70%);
+  --Dark-gray-blue: hsl(224, 30%, 70%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 18px;
+  font-family: "Hanken Grotesk", sans-serif;
+  
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--Pale-blue);
+  font-weight: 600;
+}
+.card {
+  display: flex;
+  max-width: 40em;
+  min-height: 25em;
+  background-color: var(--White);
+  border-radius: 1em;
+  position: relative;
+}
+.result,
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  width: 50%;
+  padding-inline: 2em;
+}
+.result h1 {
+    font-size: 3.5em;
+    font-weight: 1000;
+}
+.cercle p {
+    font-size: 0.8em;
+}
+.result .cercle {
+    border-radius: 5em;
+    height: 9em;
+    width: 9em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cercle {
+    background-color: hsl(252, 100%, 56%);
+}
+.result h3{
+    color: hsl(241, 100%, 89%);
+}
+.result {
+  background-color: var(--Light-royal-blue-background);
+  border-radius: 1em;
+  text-align: center;
+  align-items: center;
+  padding-inline:3em;
+}
+.cercle h1,
+.result h2 {
+    color: var(--White);
+}
+.result h2 {
+    font-weight: 500;
+}
+.cercle p{
+    color: var(--Dark-gray-blue);
+}
+.result >p {
+    color:hsl(241, 100%, 89%);
+    margin-bottom: 1.5em;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.summary{
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+.summary h3{
+  color:hsl(224, 30%, 30%);
+}
+.item ,.name {
+    display: flex;
+    height: 2.5em;
+}
+.item {
+    justify-content: space-between;
+    padding-inline: 1em;
+    border-radius: 0.5em;
+}
+.name img{
+   width: 1.2em; 
+}
+.item , .name {
+    align-items: center;
+}
+.name {
+    gap: 0.5em;
+}
+span { 
+    font-weight: 700; 
+    color: hsl(224, 30%, 30%);
+}
+.item >p{
+color: var(--Dark-gray-blue);
+}
+.items {
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* items color */
+.Reaction .name p{
+    color: var(--Light-red);
+}
+.Reaction  {
+    background-color: hsl(0, 100%, 97%);
+}
+.Memory {
+    background-color: hsl(39, 100%, 97%);
+}
+.Verbal  {
+    background-color: hsl(166, 100%, 97%);
+}
+.Visual {
+    background-color: hsl(234, 85%, 97%);
+}
+.Memory .name p{
+    color: var(--Orangey-yellow);
+}
+.Verbal .name p{
+    color: var(--Green-teal);
+}
+.Visual .name p{
+    color: var(--Cobalt-blue);
+}
+/* button */
+button {
+    height: 3em;
+    border-radius: 2em;
+    color: var(--White);
+    background-color: hsl(224, 30%, 30%);
+    font-size: 1em;
+    font-weight: 500;
+    border: none;
+}
+button , .item {
+    cursor: pointer;
+}
+ .item:hover {
+    transform: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.cercle:hover {
+    transform: 0.2s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+button:hover {
+    transform: 0.2s;
+    background-color:hsl(224, 30%, 50%); ;
+}
+@media (max-width:700px) {
+    .card {
+        display:flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .result,
+    .summary {
+      height: 50%;
+      width: 100%;
+    }
+    .result{
+       border-top-left-radius: 0;
+       border-top-right-radius: 0;
+    }
+    body {
+        align-items: stretch;
+        justify-content: stretch;
+        height: 100vh;
+      }
+}
